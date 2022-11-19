@@ -84,7 +84,7 @@ void sort(Node **head)
      Node *temp = *head;
      vector<int>v;
      while(temp){
-         v.emplace_back(temp->data);
+         v.push_back(temp->data);
          temp=temp->next;
      }
      sort(v.begin(),v.end());
