@@ -25,8 +25,7 @@ public:
         }
     }
     
-    if(ans == n-1)
-    return arr[0];
+  
     return arr[ans+1];
     }
 };
