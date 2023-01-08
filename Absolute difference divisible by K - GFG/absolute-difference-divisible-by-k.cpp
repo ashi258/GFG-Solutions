@@ -10,16 +10,18 @@ class Solution {
   public:
     long long countPairs(int n, int arr[], int k) {
         // code here
+        int cnt = 0;
         unordered_map<int,int>mp;
         
         for(int i=0; i<n; i++){
             mp[(arr[i]%k)]++;
         }
-        long long int ans=0;
-        
-        for(auto m:mp){
-            ans = ans+((m.second*(m.second-1))/2);
+        long long ans = 0;
+        for(auto x : mp) {
+            int n = x.second;
+            ans += n*(n-1)/2;
         }
+    
         return ans;
     }
 };
