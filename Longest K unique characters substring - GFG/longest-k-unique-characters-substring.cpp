@@ -15,23 +15,24 @@ class Solution{
         unordered_map<char,int>mp;
         while(j<n){
             mp[s[j]]++;
-            if(mp.size()<k) j+=1;
+            if(mp.size()<k) j++;
             else if(mp.size()==k){
                 ans=max(ans,j-i+1);
-                j+=1;
+                j++;
             }
             else{
                 while(mp.size()>k){
                     mp[s[i]]--;
                     if(mp[s[i]]==0) mp.erase(s[i]);
-                    i+=1;
+                    i++;
                 }
-                j+=1;
+                j++;
             }
         }
         return ans;
     }
 };
+
 
 //{ Driver Code Starts.
 int main() {
